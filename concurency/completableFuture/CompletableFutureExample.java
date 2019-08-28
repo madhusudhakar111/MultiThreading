@@ -27,8 +27,8 @@ public class CompletableFutureExample {
 		future.get();
 	}
 	
-	private Integer getNumber(int number) {
-		return number;
+	private String getNumber(int number) {
+		return "Number "+number;
 	}
 	
 	private void supplyAsync() throws InterruptedException, ExecutionException {
@@ -40,7 +40,7 @@ public class CompletableFutureExample {
 		for(int i=0; i<10;i++ ) {
 		taskList.add(
 					CompletableFuture.supplyAsync(
-							() -> { return getNumber(integer.incrementAndGet())+""; }, 	executor)
+							() -> { return getNumber(integer.incrementAndGet()); }, 	executor)
 			   );
 		}
 						

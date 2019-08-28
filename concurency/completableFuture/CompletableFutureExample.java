@@ -35,16 +35,16 @@ public class CompletableFutureExample {
 		
 		ExecutorService executor = Executors.newFixedThreadPool(10);
 		AtomicInteger integer = new AtomicInteger(0);
-		List<CompletableFuture> lst = new ArrayList();
+		List<CompletableFuture> taskList = new ArrayList();
 		
 		for(int i=0; i<10;i++ ) {
-		lst.add(
+		taskList.add(
 					CompletableFuture.supplyAsync(
 							() -> { return getNumber(integer.incrementAndGet())+""; }, 	executor)
 			   );
 		}
 						
-		for(CompletableFuture future: lst) {
+		for(CompletableFuture future: taskList) {
 			System.out.println(future.get());
 		}
 		

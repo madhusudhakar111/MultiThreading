@@ -1,4 +1,4 @@
-package com.sapient;
+package synchronizers;
 
 import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.TransferQueue;

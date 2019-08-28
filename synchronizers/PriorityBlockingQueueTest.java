@@ -1,4 +1,4 @@
-package com.sapient;
+package synchronizers;
 
 import java.time.LocalDate;
 import java.util.concurrent.PriorityBlockingQueue;

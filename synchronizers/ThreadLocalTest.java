@@ -1,4 +1,4 @@
-package com.sapient;
+package synchronizers;
 
 public class ThreadLocalTest {
 

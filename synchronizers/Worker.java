@@ -1,4 +1,4 @@
-package com.sapient;
+package synchronizers;
 import java.util.concurrent.CountDownLatch;
 
 //A class to represent threads for which 
